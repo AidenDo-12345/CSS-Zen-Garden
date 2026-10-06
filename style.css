@@ -1,1 +1,129 @@
-/* Empty file for template. Remember to edit only this file and not the HTML file */
+/* ==========================================================================
+   CSS Zen Garden — "Route" theme
+   Background layer only: the map grid plus the decorative extra1-extra6
+   shapes. Content styling (cards, header, sidebar, etc.) removed for now.
+   ========================================================================== */
+
+:root {
+	--bg: #edece6;
+	--grid-line: rgba(255, 255, 255, .85);
+	--ink-soft: #55555e;
+	--blue: #3d52f0;
+	--green: #bfe28a;
+	--yellow: #efc94e;
+	--lake: #aed0ee;
+	--red: #e5483a;
+	--shadow: 0 24px 48px -20px rgba(16, 20, 40, .18), 0 2px 8px rgba(16, 20, 40, .05);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { overflow-x: hidden; }
+
+body {
+	position: relative;
+	margin: 0;
+	background-color: var(--bg);
+	background-image:
+		linear-gradient(var(--grid-line) 2px, transparent 2px),
+		linear-gradient(90deg, var(--grid-line) 2px, transparent 2px);
+	background-size: 110px 110px;
+}
+
+
+.extra1, .extra2, .extra3, .extra4, .extra5 {
+	position: absolute;
+	z-index: -1;
+	pointer-events: none;
+}
+
+/* extra1: diagonal yellow road */
+.extra1 {
+	top: -5%;
+	left: 58%;
+	width: 54px;
+	height: 150%;
+	background: var(--yellow);
+	border-radius: 6px;
+	transform: rotate(11deg);
+	opacity: .9;
+}
+
+/* extra2: second yellow highway, perpendicular to extra1 (same rotation,
+   swapped dimensions — a bar rotated 11deg off vertical crosses a bar
+   rotated 11deg off horizontal at a true 90deg angle) */
+.extra2 {
+	top: 40%;
+	left: -20%;
+	width: 150%;
+	height: 54px;
+	background: var(--yellow);
+	border-radius: 6px;
+	transform: rotate(11deg);
+	opacity: .9;
+}
+
+/* extra3: small green park rectangle, upper area */
+.extra3 {
+	top: 4%;
+	left: 46%;
+	width: 560px;
+	height: 224px;
+	background: var(--green);
+	border-radius: 24px;
+}
+
+/* extra4: second green park rectangle, lower area */
+.extra4 {
+	top: 72%;
+	left:10%;
+	width: 240px;
+	height: 340px;
+	background: var(--green);
+	border-radius: 24px;
+}
+
+/* extra5: lake blob with "you are here" marker, carried entirely by its own
+   pseudo-elements so no markup needs to change */
+.extra5 {
+	top: 80%;
+	right: 2%;
+	width: 420px;
+	height: 280px;
+	background: var(--lake);
+	border-radius: 48% 52% 55% 45% / 55% 48% 52% 45%;
+}
+
+.extra5::before {
+	content: "";
+	position: absolute;
+	top: 36%;
+	left: 20%;
+	width: 18px;
+	height: 18px;
+	background: var(--blue);
+	border: 4px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 4px 10px rgba(16, 20, 40, .25);
+}
+
+.extra5::after {
+	content: "You are here";
+	position: absolute;
+	top: 32%;
+	left: calc(20% + 28px);
+	background: #fff;
+	color: var(--ink-soft);
+	font-size: .7rem;
+	font-weight: 600;
+	padding: 6px 12px;
+	border-radius: 999px;
+	box-shadow: var(--shadow);
+	white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+	.extra1, .extra2, .extra3, .extra4, .extra5 { display: none; }
+	.extra6 { width: 48px; height: 48px; left: 18px; bottom: 18px; }
+	body::before, body::after { display: none; }
+}
