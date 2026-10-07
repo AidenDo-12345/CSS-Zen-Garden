@@ -18,8 +18,6 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html, body { overflow-x: hidden; }
-
 body {
 	position: relative;
 	margin: 0;
@@ -30,6 +28,23 @@ body {
 	background-size: 110px 110px;
 }
 
+#page-wrapper {
+	position: absolute right;
+}
+
+h1 {
+	border: 5px solid black;
+	border-radius: 5%;
+	position: right;
+
+}
+
+#zen-intro {
+	background-color: white;
+	border-radius: 25px;
+
+}
+
 
 .extra1, .extra2, .extra3, .extra4, .extra5 {
 	position: absolute;
@@ -37,16 +52,14 @@ body {
 	pointer-events: none;
 }
 
-/* extra1: diagonal yellow road */
+/* extra1: small green park rectangle, upper area */
 .extra1 {
-	top: -5%;
-	left: 58%;
-	width: 54px;
-	height: 150%;
-	background: var(--yellow);
-	border-radius: 6px;
-	transform: rotate(11deg);
-	opacity: .9;
+	top: 4%;
+	left: 46%;
+	width: 760px;
+	height: 424px;
+	background: var(--green);
+	border-radius: 24px;
 }
 
 /* extra2: second yellow highway, perpendicular to extra1 (same rotation,
@@ -63,22 +76,24 @@ body {
 	opacity: .9;
 }
 
-/* extra3: small green park rectangle, upper area */
+/* extra3: diagonal yellow road */ 
 .extra3 {
-	top: 4%;
-	left: 46%;
-	width: 560px;
-	height: 224px;
-	background: var(--green);
-	border-radius: 24px;
+	top: -5%;
+	left: 58%;
+	width: 54px;
+	height: 200%;
+	background: var(--yellow);
+	border-radius: 6px;
+	transform: rotate(11deg);
+	opacity: .9;
 }
 
 /* extra4: second green park rectangle, lower area */
 .extra4 {
-	top: 72%;
-	left:10%;
-	width: 240px;
-	height: 340px;
+	top: 120%;
+	left:5%;
+	width: 340px;
+	height: 440px;
 	background: var(--green);
 	border-radius: 24px;
 }
@@ -88,8 +103,8 @@ body {
 .extra5 {
 	top: 80%;
 	right: 2%;
-	width: 420px;
-	height: 280px;
+	width: 620px;
+	height: 480px;
 	background: var(--lake);
 	border-radius: 48% 52% 55% 45% / 55% 48% 52% 45%;
 }
