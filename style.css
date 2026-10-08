@@ -26,23 +26,73 @@ body {
 		linear-gradient(var(--grid-line) 2px, transparent 2px),
 		linear-gradient(90deg, var(--grid-line) 2px, transparent 2px);
 	background-size: 110px 110px;
+
 }
 
 #page-wrapper {
 	position: absolute right;
+	display: flex;
 }
 
 h1 {
 	border: 5px solid black;
 	border-radius: 5%;
 	position: right;
-
 }
 
 #zen-intro {
+	width: 75%;
+}
+
+header, #zen-summary {
 	background-color: white;
 	border-radius: 25px;
 
+}
+
+#zen-explanation {
+	background-color: white;
+	border-radius: 25px;
+	margin: 10%;
+}
+
+#zen-supporting {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	width: 75%;
+}
+
+#zen-participation {
+	background-color: white;
+	border-radius: 25px;
+	
+}
+
+#zen-benefits {
+	background-color: white;
+	border-radius: 25px;
+	
+}
+
+#zen-requirements {
+	background-color: white;
+	border-radius: 25px;
+	
+}
+
+.sidebar {
+	display: flex;
+	justify-content: left;
+	padding-left: 1rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#zen-preamble {
+	background-color: white;
+	border-radius: 25px;
 }
 
 
