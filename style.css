@@ -32,11 +32,11 @@ body {
 #page-wrapper {
 	position: absolute right;
 	display: flex;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 
 h1 {
-	border: 5px solid black;
-	border-radius: 5%;
 	position: right;
 }
 
@@ -47,13 +47,14 @@ h1 {
 header, #zen-summary {
 	background-color: white;
 	border-radius: 25px;
+	margin: 5%;
 
 }
 
 #zen-explanation {
 	background-color: white;
 	border-radius: 25px;
-	margin: 10%;
+	margin: 5%; 
 }
 
 #zen-supporting {
@@ -66,18 +67,21 @@ header, #zen-summary {
 #zen-participation {
 	background-color: white;
 	border-radius: 25px;
+	margin: 5%;
 	
 }
 
 #zen-benefits {
 	background-color: white;
 	border-radius: 25px;
+	margin: 5%;
 	
 }
 
 #zen-requirements {
 	background-color: white;
 	border-radius: 25px;
+	margin: 5%;
 	
 }
 
@@ -88,11 +92,19 @@ header, #zen-summary {
 	position: absolute;
 	top: 0;
 	right: 0;
+	background-color: white;
+	border-radius: 25px;
+	margin: 5%;
+}
+
+.navigation>a {
+justify-content: space-around;
 }
 
 #zen-preamble {
 	background-color: white;
 	border-radius: 25px;
+	margin: 5%;
 }
 
 
@@ -114,7 +126,7 @@ header, #zen-summary {
 
 /* extra2: second yellow highway, perpendicular to extra1 (same rotation,
    swapped dimensions — a bar rotated 11deg off vertical crosses a bar
-   rotated 11deg off horizontal at a true 90deg angle) */
+   rotated 11deg */
 .extra2 {
 	top: 40%;
 	left: -20%;
